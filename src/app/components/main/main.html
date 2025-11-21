@@ -1,0 +1,15 @@
+<section>
+    @for(item of jewelry; track $index){
+    <div class="card">
+        <img [src]="item.photos[0]" alt="thumbnail">
+        <div class="info">
+            <h3>{{item.name}}</h3>
+            <p>
+                {{item.description}}
+            </p>
+            <p>{{item.price}}<sup>$</sup></p>
+        </div>
+        <a [routerLink]="['details', item.id]" class="btn">View Details</a>
+    </div>
+    }
+</section>

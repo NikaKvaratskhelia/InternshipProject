@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: k2d-regular;
+    src: url(Assets/fonts/K2D/K2D-Regular.ttf);
+}
+@font-face {
+    font-family: k2d-light;
+    src: url(Assets/fonts/K2D/K2D-Light.ttf);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #F2F2F2;
+}
