@@ -1,0 +1,35 @@
+<div class="wrapper">
+    <section>
+        <div class="gallery">
+            <div class="choose-btns">
+                <span (click)="wantedPhoto='gallery'" [ngClass]="{active:wantedPhoto=='gallery'}">Gallery</span>
+                <p>|</p>
+                <span (click)="wantedPhoto='3d'" [ngClass]="{active:wantedPhoto=='3d'}">3D Model</span>
+            </div>
+            @if(wantedPhoto === 'gallery'){
+            <div class="slider">
+
+                <button (click)="prev()" class="nav">‹</button>
+                <div class="slides">
+
+                    @for(img of wantedProduct?.photos; track $index){
+                    <img [src]="img" alt="photo" [class.active]="$index === currentIndex">
+                    }
+                </div>
+                <button (click)="next()" class="nav">›</button>
+            </div>
+
+            }@else{
+            <app-canvas></app-canvas>
+            }
+        </div>
+
+        <div class="info">
+            <h1>{{wantedProduct?.name}}</h1>
+            <p>{{wantedProduct?.description}}</p>
+            <p>{{wantedProduct?.price}} <sup>$</sup></p>
+
+            <button disabled>Add To Cart</button>
+        </div>
+    </section>
+</div>
