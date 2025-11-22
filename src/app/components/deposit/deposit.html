@@ -1,1 +1,45 @@
-<p>deposit works!</p>
+<form class="payment-info" (submit)="deposit()" [formGroup]="paymentInfo">
+
+    <div class="card-number">
+        <label for="cardNum">ბარათის ნომერი*</label><input id="cardNum" formControlName="cardNum" inputmode="numeric"
+            pattern="[0-9 ]*" (input)="formatCardNum($event)" placeholder="0123 4567 8901 1234" required
+            maxlength="19" />
+
+    </div>
+
+    <div class="card-date-cvv">
+        <div class="card-date input-group">
+            <label for="cardDate">მოქმედების ვადა*</label><input id="cardDate" formControlName="cardDate"
+                inputmode="numeric" pattern="[0-9/ ]*" (input)="formatDate($event)" placeholder="MM / YYYY" required />
+
+        </div>
+
+        <div class="card-cvv input-group">
+            <label for="cardCvv">CVC / CVV</label>
+            <input id="cardCvv" formControlName="cardCvv" inputmode="numeric" pattern="\d*" maxlength="4"
+                (input)="digitsOnly($event)" placeholder="CVC / CVV" required />
+        </div>
+    </div>
+
+    <div class="card-owner input-group">
+        <label for="cardOwner">ბარათის მფლობელი*</label><input id="cardOwner" formControlName="cardOwner"
+            pattern="[A-Za-z .']*" (input)="lettersOnly($event)" placeholder="J.Smith" required />
+    </div>
+
+    <div class="depo-amount input-group">
+        <label for="depo">დეპოზიტი*</label>
+        <input id="depo" type="number" min="0" max="9999" formControlName="depo" (input)="digitsOnly($event)"
+            placeholder="Deposit Amount" required />
+        @if(errorMessage.length > 0){
+        {{errorMessage}}
+        }
+    </div>
+
+    <button type=" submit">გადახდა</button>
+</form>
+
+@if(showPopup){
+<div class="pop-up">
+    {{ errorMessage }}
+</div>
+}
