@@ -12,6 +12,7 @@ interface Product {
   modelPath: string;
   photos: string[];
   cameraPos: number[];
+  availableColors?: Record<string, string>;
 }
 
 @Component({
@@ -51,6 +52,12 @@ export class Canvas implements AfterViewInit {
         'Assets/images/magicRing3.webp',
       ],
       cameraPos: [0, 0, 5],
+      availableColors: {
+        default: 'Assets/Models/magic_ring.glb',
+        red: 'Assets/Models/redRing.glb',
+        green: 'Assets/Models/greenRing.glb',
+        blue: 'Assets/Models/blueRing.glb',
+      },
     },
     {
       id: 3,
@@ -75,11 +82,12 @@ export class Canvas implements AfterViewInit {
   private orbitControls!: OrbitControls;
   public path: string | undefined = '';
   public wantedProduct: Product | undefined;
+  private currentModel: THREE.Object3D | null = null;
 
   ngAfterViewInit(): void {
     this.setUpScene();
     this.animate();
-    this.loadModel();
+    this.loadModel(this.path || '');
   }
 
   constructor(private route: ActivatedRoute) {
@@ -90,6 +98,13 @@ export class Canvas implements AfterViewInit {
     }
 
     this.path = this.wantedProduct?.modelPath;
+  }
+
+  setUpPath(key: string) {
+    this.path = this.wantedProduct?.availableColors?.[key] || '';
+    console.log(this.path);
+
+    this.loadModel(this.path);
   }
 
   private setUpScene() {
@@ -132,30 +147,37 @@ export class Canvas implements AfterViewInit {
     this.renderer.render(this.scene, this.camera);
   };
 
-  private loadModel() {
+  private loadModel(modelPath: string) {
+    if (!modelPath) return;
+
     const loader = new GLTFLoader();
 
-    loader.load(
-      this.path || '',
+    if (this.currentModel) {
+      this.scene.remove(this.currentModel);
+      this.currentModel = null;
+    }
 
+    loader.load(
+      modelPath,
       (gltf) => {
         const model = gltf.scene;
 
         const box = new THREE.Box3().setFromObject(model);
         const center = new THREE.Vector3();
-        model.position.set(0, 0, 0);
         box.getCenter(center);
-
         model.position.sub(center);
+
         if (this.wantedProduct?.cameraPos) {
           this.camera.position.set(
-            this.wantedProduct?.cameraPos[0],
-            this.wantedProduct?.cameraPos[1],
-            this.wantedProduct?.cameraPos[2]
+            this.wantedProduct.cameraPos[0],
+            this.wantedProduct.cameraPos[1],
+            this.wantedProduct.cameraPos[2]
           );
         }
 
         this.scene.add(model);
+
+        this.currentModel = model;
       },
       undefined,
       (error) => {

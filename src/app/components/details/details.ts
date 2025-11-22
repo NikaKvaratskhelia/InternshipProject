@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Canvas } from '../canvas/canvas';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -10,6 +10,7 @@ interface Product {
   price: number;
   modelPath: string;
   photos: string[];
+  availableColors?: any;
 }
 
 @Component({
@@ -45,6 +46,24 @@ export class Details {
         'Assets/images/magicRing2.webp',
         'Assets/images/magicRing3.webp',
       ],
+      availableColors: [
+        {
+          default: 'Assets/Models/magic_ring.glb',
+          color: 'Default',
+        },
+        {
+          red: 'Assets/Models/redRing.glb',
+          color: 'Red',
+        },
+        {
+          green: 'Assets/Models/greenRing.glb',
+          color: 'Green',
+        },
+        {
+          blue: 'Assets/Models/blueRing.glb',
+          color: 'Blue',
+        },
+      ],
     },
     {
       id: 3,
@@ -61,6 +80,9 @@ export class Details {
     },
   ];
 
+  @ViewChild(Canvas) canvas!: Canvas;
+
+  public wantedColor: string = 'Default';
   public currentIndex = 0;
   public id: number | null = null;
   public wantedProduct: Product | undefined;
@@ -72,6 +94,12 @@ export class Details {
     if (this.id !== null) {
       this.wantedProduct = this.jewelry.find((j) => j.id === this.id);
     }
+  }
+
+  changeModel(color: string) {
+    this.wantedColor = color;
+
+    this.canvas.setUpPath(this.wantedColor.toLowerCase());
   }
 
   prev() {

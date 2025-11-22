@@ -92,6 +92,33 @@ section {
         }
       }
     }
+
+    .colors {
+      display: flex;
+      gap: 20px;
+
+      .color-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        cursor: pointer;
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #b7b5b5;
+
+          &.active{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
   }
 
   .info {

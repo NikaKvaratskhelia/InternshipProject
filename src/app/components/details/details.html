@@ -20,6 +20,18 @@
             </div>
 
             }@else{
+            <div class="colors">
+                @for(color of wantedProduct?.availableColors; track $index){
+                <div class="color-wrapper" (click)="changeModel(color.color)">
+                    <p>{{ color.color }}</p>
+
+                    <div class="circle" [ngStyle]="{ backgroundColor: color.color }"
+                        [ngClass]="{ active: wantedColor === color.color }">
+                    </div>
+                </div>
+
+                }
+            </div>
             <app-canvas></app-canvas>
             }
         </div>
