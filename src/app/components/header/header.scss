@@ -1,0 +1,33 @@
+header {
+  font-family: k2d-regular;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe3e3;
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+      a {
+        font-size: 18px;
+        color: black;
+      }
+    }
+  }
+
+  .balance {
+    padding: 10px;
+    border-radius: 16px;
+    text-align: center;
+    user-select: none;
+
+    span {
+      font-size: 16px;
+      background-color: #ef9f9f;
+      padding: 4px 8px;
+      border-radius: 16px;
+      text-align: center;
+    }
+  }
+}
