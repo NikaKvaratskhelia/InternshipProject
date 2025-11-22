@@ -1,0 +1,245 @@
+.cart-container {
+  background: #f9f9ff;
+  box-shadow: 6px 6px 16px #dbe1ec, -6px -6px 16px #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a40;
+    margin-bottom: 1.5rem;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: start;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 4px 4px 10px #d2d8e3, -4px -4px 10px #ffffff;
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    .cart-info {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0;
+        color: #333;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 0.3rem;
+      }
+
+      .cart-quantity {
+        margin-right: 20px;
+        margin-top: 0.6rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        button {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          border: none;
+          border-radius: 50%;
+          background-color: #0a74da;
+          color: white;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background-color: #075bb5;
+          }
+        }
+
+        span {
+          min-width: 24px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .remove {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 1.4rem;
+      border: none;
+      background: none;
+      color: #e63946;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .cart-summary {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .checkout-btn {
+      background-color: #0a74da;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(10, 116, 218, 0.3);
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #075bb5;
+      }
+    }
+  }
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #777;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  img {
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
+.cart-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #555;
+}
+
+@media screen and (max-width: 750px) {
+  .cart-container .cart-item .cart-info h3 {
+    &.title {
+      display: none;
+    }
+
+    &.product-title-responsive {
+      display: block;
+      position: relative;
+      overflow: visible;
+
+      &:hover {
+        &::after {
+          display: block;
+        }
+      }
+
+      &::after {
+        content: attr(title);
+        position: absolute;
+        width: 200px;
+        top: 30px;
+        padding: 5px;
+        background-color: #222;
+        color: white;
+        display: none;
+      }
+    }
+  }
+}
+
+.pop-up {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  max-width: 300px;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: #0a74da;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'bpg arial caps';
+  animation: slideUp 0.3s ease-out, fadeOut 0.5s ease-in 2.5s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}

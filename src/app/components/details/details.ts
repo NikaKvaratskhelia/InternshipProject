@@ -84,4 +84,30 @@ export class Details {
     if (!this.wantedProduct) return;
     this.currentIndex = (this.currentIndex + 1) % this.wantedProduct.photos.length;
   }
+
+  addToCart() {
+    if (!this.wantedProduct) return;
+
+    const product = {
+      id: this.wantedProduct.id,
+      name: this.wantedProduct.name,
+      description: this.wantedProduct.description,
+      price: this.wantedProduct.price,
+      modelPath: this.wantedProduct.modelPath,
+      photos: this.wantedProduct.photos?.slice(0, 3) || [],
+      qty: 1,
+    };
+
+    const cart: any[] = JSON.parse(localStorage.getItem('cart') || '[]');
+
+    const existingProduct = cart.find((i) => i.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.qty += 1;
+    } else {
+      cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
 }

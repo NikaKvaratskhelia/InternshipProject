@@ -82,6 +82,7 @@
     background-color: #fafaff;
   }
 }
+
 .pop-up {
   position: fixed;
   bottom: 20px;
@@ -100,14 +101,6 @@
   font-weight: 500;
   font-family: 'bpg arial caps';
   animation: slideUp 0.3s ease-out, fadeOut 0.5s ease-in 2.5s forwards;
-}
-
-.green {
-  background-color: green;
-}
-
-.red {
-  background-color: red;
 }
 
 @keyframes slideUp {

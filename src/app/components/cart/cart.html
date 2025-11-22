@@ -1,1 +1,51 @@
-<p>cart works!</p>
+@if(cart.length > 0){
+<div class="cart-container">
+    <h2>Your Cart</h2>
+
+    <div class="cart-items">
+        @for (item of cart; track item.id;) {
+        <div class="cart-item">
+            <a [routerLink]="['/details', item.id]" class="cart-image">
+                <img [src]="item.photos[0]" alt="Product" />
+            </a>
+
+            <div class="cart-info">
+                <div>
+                    <h3 class="title">{{ item.name}}</h3>
+                    <p>{{ item.price }}$</p>
+                </div>
+
+                <div class="cart-quantity">
+                    <button (click)="decreaseQty(item)">−</button>
+                    <span>{{ item.qty }}</span>
+                    <button (click)="increaseQty(item)">+</button>
+                </div>
+            </div>
+
+            <button class="remove" (click)="removeFromCart(item)">×</button>
+        </div>
+        }
+    </div>
+
+    <div class="cart-summary">
+        <p>
+            Subtotal: <strong>{{total}}$</strong>
+        </p>
+        <a class="checkout-btn" (click)="checkout()">
+            Checkout
+        </a>
+    </div>
+</div>
+} @else {
+<div class="empty-cart">
+    <h2>Your cart is empty 🛒</h2>
+    <p>Add something nice!</p>
+    <img src="Assets/images/emptyCart.webp" alt="">
+</div>
+}
+
+@if(showPopup){
+<div class="pop-up">
+    {{ errorMessage }}
+</div>
+}

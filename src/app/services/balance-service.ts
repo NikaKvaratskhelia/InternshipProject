@@ -18,4 +18,21 @@ export class BalanceService {
     this.balanceSubject.next(amount);
     localStorage.setItem('balance', String(amount));
   }
+
+  checkout(totalAmount: number): boolean {
+    const currentBalance = this.balanceSubject.value;
+
+    if (currentBalance < totalAmount) {
+      console.error('Insufficient balance!');
+      return false;
+    }
+
+    const newBalance = currentBalance - totalAmount;
+    this.setBalance(newBalance);
+
+    localStorage.removeItem('cart');
+
+    console.log('Checkout successful! Remaining balance:', newBalance);
+    return true;
+  }
 }
