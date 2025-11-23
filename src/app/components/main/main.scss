@@ -1,65 +1,75 @@
-section {
-  display: flex;
+.wrapper {
   padding: 100px;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  width: fit-content;
-  margin: auto;
-
-  .card {
-    width: 283px;
-    border-radius: 24px;
-    padding: 8px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  h1 {
     font-family: k2d-regular;
+  }
 
-    img {
-      aspect-ratio: 2/2;
-      border-radius: 16px;
-    }
+  section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    width: fit-content;
+    margin: auto;
 
-    .info {
+    .card {
+      width: 283px;
+      border-radius: 24px;
+      padding: 8px;
+      background-color: #ffffff;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 10px;
+      font-family: k2d-regular;
 
-      h3 {
-        font-family: k2d-light;
-        font-size: 20px;
+      img {
+        aspect-ratio: 2/2;
+        border-radius: 16px;
       }
 
-      p:not(:last-child) {
-        font-size: 14px;
-        opacity: 0.7;
-      }
-      p {
-        font-size: 24px;
-      }
-    }
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8px;
-      color: #000;
-      border-radius: 16px;
-      background-color: #ffe3e3;
-      cursor: pointer;
+        h3 {
+          font-family: k2d-light;
+          font-size: 20px;
+        }
 
-      &:hover{
-        background-color: #EF9F9F;
+        p:not(:last-child) {
+          font-size: 14px;
+          opacity: 0.7;
+        }
+        p {
+          font-size: 24px;
+        }
       }
 
-      &:active{
-        background-color: #FB5353;
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 8px;
+        color: #000;
+        border-radius: 16px;
+        background-color: #ffe3e3;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ef9f9f;
+        }
+
+        &:active {
+          background-color: #fb5353;
+        }
       }
     }
   }
