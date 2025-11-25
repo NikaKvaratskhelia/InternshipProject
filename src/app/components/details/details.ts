@@ -96,21 +96,45 @@ export class Details {
     }
   }
 
+  nextIndex: number | null = null;
+  direction: 'left' | 'right' | null = null;
+
+  get length() {
+    return this.wantedProduct?.photos?.length || 0;
+  }
+
+  go(direction: 'left' | 'right') {
+    if (this.nextIndex !== null) return; 
+
+    const newIndex =
+      direction === 'right'
+        ? (this.currentIndex + 1) % this.length
+        : (this.currentIndex - 1 + this.length) % this.length;
+
+    this.nextIndex = newIndex;
+    this.direction = direction;
+  }
+
+  onAnimationEnd() {
+    if (this.nextIndex === null) return;
+
+    this.currentIndex = this.nextIndex;
+    this.nextIndex = null;
+    this.direction = null;
+  }
+
+  next() {
+    this.go('right');
+  }
+
+  prev() {
+    this.go('left');
+  }
+
   changeModel(color: string) {
     this.wantedColor = color;
 
     this.canvas.setUpPath(this.wantedColor.toLowerCase());
-  }
-
-  prev() {
-    if (!this.wantedProduct) return;
-    this.currentIndex =
-      (this.currentIndex - 1 + this.wantedProduct.photos.length) % this.wantedProduct.photos.length;
-  }
-
-  next() {
-    if (!this.wantedProduct) return;
-    this.currentIndex = (this.currentIndex + 1) % this.wantedProduct.photos.length;
   }
 
   addToCart() {
