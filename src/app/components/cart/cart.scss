@@ -51,6 +51,7 @@
       display: flex;
       justify-content: space-between;
       gap: 10px;
+      flex-wrap: wrap;
 
       h3 {
         font-size: 1.1rem;
@@ -174,37 +175,6 @@
   font-size: 1.4rem;
   font-weight: 500;
   color: #555;
-}
-
-@media screen and (max-width: 750px) {
-  .cart-container .cart-item .cart-info h3 {
-    &.title {
-      display: none;
-    }
-
-    &.product-title-responsive {
-      display: block;
-      position: relative;
-      overflow: visible;
-
-      &:hover {
-        &::after {
-          display: block;
-        }
-      }
-
-      &::after {
-        content: attr(title);
-        position: absolute;
-        width: 200px;
-        top: 30px;
-        padding: 5px;
-        background-color: #222;
-        color: white;
-        display: none;
-      }
-    }
-  }
 }
 
 .pop-up {

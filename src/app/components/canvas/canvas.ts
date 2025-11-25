@@ -88,6 +88,7 @@ export class Canvas implements AfterViewInit {
     this.setUpScene();
     this.animate();
     this.loadModel(this.path || '');
+    window.addEventListener('resize', this.onWindowResize, false);
   }
 
   constructor(private route: ActivatedRoute) {
@@ -99,6 +100,15 @@ export class Canvas implements AfterViewInit {
 
     this.path = this.wantedProduct?.modelPath;
   }
+
+  private onWindowResize = () => {
+    const canvas = this.canvasRef.nativeElement;
+
+    this.camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    this.camera.updateProjectionMatrix();
+
+    this.renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  };
 
   setUpPath(key: string) {
     this.path = this.wantedProduct?.availableColors?.[key] || '';

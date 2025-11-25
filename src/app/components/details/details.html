@@ -6,40 +6,45 @@
                 <p>|</p>
                 <span (click)="wantedPhoto='3d'" [ngClass]="{active:wantedPhoto=='3d'}">3D Model</span>
             </div>
+
             @if(wantedPhoto === 'gallery'){
             <div class="slider">
+                <button class="nav nav-left" (click)="prev()">‹</button>
 
-                <button (click)="prev()" class="nav">‹</button>
                 <div class="slides">
-
-                    @for(img of wantedProduct?.photos; track $index){
-                    <img [src]="img" alt="photo" [class.active]="$index === currentIndex">
+                    @for (img of wantedProduct?.photos; let i = $index; track i;) {
+                    <img [src]="img" alt="photo" (animationend)="onAnimationEnd()"
+                        [class.current]="i === currentIndex && nextIndex === null"
+                        [class.next-left]="i === nextIndex && direction === 'left'"
+                        [class.next-right]="i === nextIndex && direction === 'right'"
+                        [class.exit-left]="i === currentIndex && direction === 'left'"
+                        [class.exit-right]="i === currentIndex && direction === 'right'" />
                     }
                 </div>
-                <button (click)="next()" class="nav">›</button>
+
+                <button class="nav nav-right" (click)="next()">›</button>
             </div>
+
 
             }@else{
             <div class="colors">
                 @for(color of wantedProduct?.availableColors; track $index){
                 <div class="color-wrapper" (click)="changeModel(color.color)">
-                    <p>{{ color.color }}</p>
-
                     <div class="circle" [ngStyle]="{ backgroundColor: color.color }"
-                        [ngClass]="{ active: wantedColor === color.color }">
-                    </div>
+                        [ngClass]="{ active: wantedColor === color.color }"></div>
+                    <p>{{ color.color }}</p>
                 </div>
-
                 }
             </div>
+
             <app-canvas></app-canvas>
             }
         </div>
 
         <div class="info">
             <h1>{{wantedProduct?.name}}</h1>
-            <p>{{wantedProduct?.description}}</p>
-            <p>{{wantedProduct?.price}} <sup>$</sup></p>
+            <p class="desc">{{wantedProduct?.description}}</p>
+            <p class="price">{{wantedProduct?.price}} <sup>$</sup></p>
 
             <button (click)="addToCart()">Add To Cart</button>
         </div>
