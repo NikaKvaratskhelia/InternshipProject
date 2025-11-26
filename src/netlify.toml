@@ -1,0 +1,13 @@
+[build]
+  publish = "dist/InternshipProject/browser"
+  command = "ng build --localize"
+
+[[redirects]]
+  from = "/"
+  to = "/en-us/"
+  status = 302
+
+[[redirects]]
+  from = "/*"
+  to = "/en-us/"
+  status = 200

@@ -4,6 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "InternshipProject": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {"ka":"src/locale/messages.ka.xlf"}
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +21,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize":["ka"],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -29,6 +34,9 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           },
           "configurations": {
@@ -84,6 +92,9 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           }
         }

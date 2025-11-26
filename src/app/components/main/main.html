@@ -1,5 +1,5 @@
 <div class="wrapper"> 
-    <h1>Our Products:</h1>
+    <h1 i18n>Our Products:</h1>
 
     <section>
         @for(item of jewelry; track $index){
@@ -12,7 +12,7 @@
                 </p>
                 <p>{{item.price}}<sup>$</sup></p>
             </div>
-            <a [routerLink]="['details', item.id]" class="btn">View Details</a>
+            <a [routerLink]="['details', item.id]" class="btn" i18n>View Details</a>
         </div>
         }
     </section>

@@ -83,12 +83,11 @@ export class Cart {
 
   checkout() {
     this.showPopup = true;
-    console.log(this.total)
 
     if (!this.balanceService.checkout(this.total)) {
-      this.errorMessage = 'არასაკმარისი თანხა';
+      this.errorMessage = $localize`Insufficient balance!`;
     } else {
-      this.errorMessage = 'ნივთები წარმატებით შეიძინე';
+      this.errorMessage = $localize`Checkour Successful!`;
     }
 
     setTimeout(() => {
@@ -97,5 +96,7 @@ export class Cart {
     }, 1000);
 
     this.cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+    console.log(this.cart);
   }
 }

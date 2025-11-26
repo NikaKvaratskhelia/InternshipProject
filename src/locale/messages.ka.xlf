@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="ka">
+    <body>
+
+      <trans-unit id="1806996447487025167" datatype="html">
+        <source>Your Cart</source>
+        <target>თქვენი კალათა</target>
+      </trans-unit>
+
+      <trans-unit id="1602392141546844769" datatype="html">
+        <source> Subtotal: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{total}}"/>$<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>ქვეტოტალი: <x id="START_TAG_STRONG"/><x id="INTERPOLATION"/>$<x id="CLOSE_TAG_STRONG"/></target>
+      </trans-unit>
+
+      <trans-unit id="8669905005675397326" datatype="html">
+        <source> Checkout </source>
+        <target>გადახდა</target>
+      </trans-unit>
+
+      <trans-unit id="1628983125207469184" datatype="html">
+        <source>Your cart is empty 🛒</source>
+        <target>თქვენი კალათა ცარიელია 🛒</target>
+      </trans-unit>
+
+      <trans-unit id="5562449764807846515" datatype="html">
+        <source>Add something nice!</source>
+        <target>დაამატეთ რამე სასიამოვნო!</target>
+      </trans-unit>
+
+      <trans-unit id="1338411783769690207" datatype="html">
+        <source>Insufficient balance!</source>
+        <target>არასაკმარისი ბალანსი!</target>
+      </trans-unit>
+
+      <trans-unit id="8747838992853585418" datatype="html">
+        <source>Checkour Successful!</source>
+        <target>გადახდა წარმატებით დასრულდა!</target>
+      </trans-unit>
+
+      <trans-unit id="3888513704090019098" datatype="html">
+        <source>Card Number*</source>
+        <target>ბარათის ნომერი*</target>
+      </trans-unit>
+
+      <trans-unit id="2952895892013851979" datatype="html">
+        <source>Valid until**</source>
+        <target>ვადიანობა*</target>
+      </trans-unit>
+
+      <trans-unit id="1657350309611014401" datatype="html">
+        <source>Card Owner*</source>
+        <target>ბარათის მფლობელი*</target>
+      </trans-unit>
+
+      <trans-unit id="276126770465362981" datatype="html">
+        <source>Deposit*</source>
+        <target>დეპოზიტი*</target>
+      </trans-unit>
+
+      <trans-unit id="8763028523653406079" datatype="html">
+        <source>Pay</source>
+        <target>გადახდა</target>
+      </trans-unit>
+
+      <trans-unit id="7021509755375804752" datatype="html">
+        <source>Minimum value for deposit is 1$.</source>
+        <target>მინიმალური დეპოზიტი არის 1$.</target>
+      </trans-unit>
+
+      <trans-unit id="9138184699390036120" datatype="html">
+        <source>Deposit successful!</source>
+        <target>დეპოზიტი წარმატებით შესრულდა!</target>
+      </trans-unit>
+
+      <trans-unit id="2181154762165715522" datatype="html">
+        <source>Gallery</source>
+        <target>გალერეა</target>
+      </trans-unit>
+
+      <trans-unit id="6176513342515733864" datatype="html">
+        <source>3D Model</source>
+        <target>3D მოდელი</target>
+      </trans-unit>
+
+      <trans-unit id="8594034074687255153" datatype="html">
+        <source>Add To Cart</source>
+        <target>კალათაში დამატება</target>
+      </trans-unit>
+
+      <trans-unit id="8157792476753010540" datatype="html">
+        <source>Black Standart Ring</source>
+        <target>შავი სტანდარტული ბეჭედი</target>
+      </trans-unit>
+
+      <trans-unit id="6861464230200083950" datatype="html">
+        <source>Minimalist black-coated ring designed for everyday wear. Clean, modern, and built to complement any style without trying too hard</source>
+        <target>მინიმალისტური შავი საფარით დაფარული ბეჭედი ყოველდღიური ტარებისთვის. სუფთა, თანამედროვე და ნებისმიერი სტილის შესავსებად შექმნილი.</target>
+      </trans-unit>
+
+      <trans-unit id="6151557753923364997" datatype="html">
+        <source>Magic Ring</source>
+        <target>მაგიური ბეჭედი</target>
+      </trans-unit>
+
+      <trans-unit id="5292873066535638255" datatype="html">
+        <source>A standout ring featuring detailed engravings and gemstone highlights. Crafted to look mystical without feeling cheap or gimmicky.</source>
+        <target>გამორჩეული ბეჭედი დეტალური ნაკვეთებითა და ქვის აქცენტებით. შექმნილი მისტიკურად რომ გამოიყურებოდეს, მაგრამ ხელოვნურად ან უხარისხოდ არა.</target>
+      </trans-unit>
+
+      <trans-unit id="8517479628859860317" datatype="html">
+        <source>Pearl Necklace</source>
+        <target>მარგალიტის ყელსაბამი</target>
+      </trans-unit>
+
+      <trans-unit id="6159332658626444982" datatype="html">
+        <source>Elegant freshwater-style pearls arranged in a classic strand. Soft shine, timeless look, and perfect for elevating any outfit.</source>
+        <target>ელეგანტური მტკნარი წყლის სტილის მარგალიტები, კლასიკურ მონაჯაჭვში. რბილი ბრწყინვა, დროისგან შეუცვლელი ლუქი და ნებისმიერი ჩაცმის შესავსებად იდეალური.</target>
+      </trans-unit>
+
+      <trans-unit id="7758711987677605289" datatype="html">
+        <source> © All rights reserved! </source>
+        <target> © ყველა უფლება დაცულია! </target>
+      </trans-unit>
+
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>მთავარი</target>
+      </trans-unit>
+
+      <trans-unit id="4398863504443682316" datatype="html">
+        <source>Cart</source>
+        <target>კალათა</target>
+      </trans-unit>
+
+      <trans-unit id="5213771062241898526" datatype="html">
+        <source>Deposit</source>
+        <target>დეპოზიტი</target>
+      </trans-unit>
+
+      <trans-unit id="9157831361957406972" datatype="html">
+        <source>Our Products:</source>
+        <target>ჩვენი პროდუქტები:</target>
+      </trans-unit>
+
+      <trans-unit id="1468015720862673946" datatype="html">
+        <source>View Details</source>
+        <target>დეტალების ნახვა</target>
+      </trans-unit>
+
+      <trans-unit id="6718579136196423805" datatype="html">
+        <source>Minimalist black-coated ring designed for everyday wear. Clean, modern, and built to complement any style without trying too hard.</source>
+        <target>მინიმალისტური შავი საფარით დაფარული ბეჭედი ყოველდღიური ტარებისთვის. სუფთა, თანამედროვე და ნებისმიერი სტილის შესავსებად შექმნილი.</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

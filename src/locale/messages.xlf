@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1806996447487025167" datatype="html">
+        <source>Your Cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1602392141546844769" datatype="html">
+        <source> Subtotal: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{total}}"/>$<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8669905005675397326" datatype="html">
+        <source> Checkout </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1628983125207469184" datatype="html">
+        <source>Your cart is empty 🛒</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5562449764807846515" datatype="html">
+        <source>Add something nice!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1338411783769690207" datatype="html">
+        <source>Insufficient balance!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8747838992853585418" datatype="html">
+        <source>Checkour Successful!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cart/cart.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3888513704090019098" datatype="html">
+        <source>Card Number*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2952895892013851979" datatype="html">
+        <source>Valid until**</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1657350309611014401" datatype="html">
+        <source>Card Owner*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="276126770465362981" datatype="html">
+        <source>Deposit*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8763028523653406079" datatype="html">
+        <source>Pay</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7021509755375804752" datatype="html">
+        <source>Minimum value for deposit is 1$.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9138184699390036120" datatype="html">
+        <source>Deposit successful!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/deposit/deposit.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2181154762165715522" datatype="html">
+        <source>Gallery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6176513342515733864" datatype="html">
+        <source>3D Model</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8594034074687255153" datatype="html">
+        <source>Add To Cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8157792476753010540" datatype="html">
+        <source>Black Standart Ring</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6861464230200083950" datatype="html">
+        <source>Minimalist black-coated ring designed for everyday wear. Clean, modern, and built to complement any style without trying too hard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6151557753923364997" datatype="html">
+        <source>Magic Ring</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5292873066535638255" datatype="html">
+        <source>A standout ring featuring detailed engravings and gemstone highlights. Crafted to look mystical without feeling cheap or gimmicky.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8517479628859860317" datatype="html">
+        <source>Pearl Necklace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6159332658626444982" datatype="html">
+        <source>Elegant freshwater-style pearls arranged in a classic strand. Soft shine, timeless look, and perfect for elevating any outfit.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/details/details.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7758711987677605289" datatype="html">
+        <source> © All rights reserved! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4398863504443682316" datatype="html">
+        <source>Cart</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5213771062241898526" datatype="html">
+        <source>Deposit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9157831361957406972" datatype="html">
+        <source>Our Products:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1468015720862673946" datatype="html">
+        <source>View Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6718579136196423805" datatype="html">
+        <source>Minimalist black-coated ring designed for everyday wear. Clean, modern, and built to complement any style without trying too hard.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main/main.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

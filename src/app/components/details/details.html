@@ -2,9 +2,9 @@
     <section>
         <div class="gallery">
             <div class="choose-btns">
-                <span (click)="wantedPhoto='gallery'" [ngClass]="{active:wantedPhoto=='gallery'}">Gallery</span>
+                <span (click)="wantedPhoto='gallery'" [ngClass]="{active:wantedPhoto=='gallery'}" i18n>Gallery</span>
                 <p>|</p>
-                <span (click)="wantedPhoto='3d'" [ngClass]="{active:wantedPhoto=='3d'}">3D Model</span>
+                <span (click)="wantedPhoto='3d'" [ngClass]="{active:wantedPhoto=='3d'}" i18n>3D Model</span>
             </div>
 
             @if(wantedPhoto === 'gallery'){
@@ -46,7 +46,7 @@
             <p class="desc">{{wantedProduct?.description}}</p>
             <p class="price">{{wantedProduct?.price}} <sup>$</sup></p>
 
-            <button (click)="addToCart()">Add To Cart</button>
+            <button (click)="addToCart()" i18n>Add To Cart</button>
         </div>
     </section>
 </div>

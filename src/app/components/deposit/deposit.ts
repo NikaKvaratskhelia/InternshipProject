@@ -36,7 +36,7 @@ export class Deposit {
 
   deposit() {
     if (this.paymentInfo.value.depo <= 0) {
-      this.errorMessage = 'დეპოზიტი ვერ იქნება ერთზე ნაკლები.';
+      this.errorMessage = $localize`Minimum value for deposit is 1$.`;
       return;
     }
 
@@ -44,7 +44,7 @@ export class Deposit {
     this.balanceService.setBalance(newBalance);
 
     this.showPopup = true;
-    this.errorMessage = "დეპოზიტი წარმატებით დაემატა"
+    this.errorMessage = $localize`Deposit successful!`
     setTimeout(() => {
       this.showPopup = false;
       this.router.navigate(['/']);

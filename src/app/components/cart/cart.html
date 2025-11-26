@@ -1,6 +1,6 @@
 @if(cart.length > 0){
 <div class="cart-container">
-    <h2>Your Cart</h2>
+    <h2 i18n>Your Cart</h2>
 
     <div class="cart-items">
         @for (item of cart; track item.id;) {
@@ -28,18 +28,18 @@
     </div>
 
     <div class="cart-summary">
-        <p>
+        <p i18n>
             Subtotal: <strong>{{total}}$</strong>
         </p>
-        <a class="checkout-btn" (click)="checkout()">
+        <a i18n class="checkout-btn" (click)="checkout()">
             Checkout
         </a>
     </div>
 </div>
 } @else {
 <div class="empty-cart">
-    <h2>Your cart is empty 🛒</h2>
-    <p>Add something nice!</p>
+    <h2 i18n>Your cart is empty 🛒</h2>
+    <p i18n>Add something nice!</p>
     <img src="Assets/images/emptyCart.webp" alt="">
 </div>
 }
