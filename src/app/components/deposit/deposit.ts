@@ -35,14 +35,17 @@ export class Deposit {
   });
 
   deposit() {
-    if (this.paymentInfo.value.depo <= 0) {
-      this.errorMessage = $localize`Minimum value for deposit is 1$.`;
-      return;
-    }
+    console.log('depo function');
 
     if (!this.paymentInfo.valid) {
+      console.log(this.paymentInfo.valid);
+
       this.showPopup = true;
       this.errorMessage = 'Incorrect form';
+      setTimeout(() => {
+        this.showPopup = false;
+        this.errorMessage = '';
+      }, 2000);
       return;
     }
 
