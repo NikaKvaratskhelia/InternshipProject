@@ -5,7 +5,7 @@
   "projects": {
     "InternshipProject": {
       "i18n": {
-        "sourceLocale":"en-US",
+        "sourceLocale":"en-us",
         "locales": {"ka":"src/locale/messages.ka.xlf"}
       },
       "projectType": "application",
