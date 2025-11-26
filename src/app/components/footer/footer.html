@@ -1,3 +1,13 @@
 <footer>
     <p i18n> &#169; All rights reserved! </p>
+
+    <p (click)="showLangs = !showLangs" class="choose" i18n>Choose Language</p>
+
+    @if(showLangs){
+    <div class="languages">
+        <a href="/en-us" i18n>English</a>
+        <a href="/ka" i18n>Georgian</a>
+    </div>
+    }
+
 </footer>

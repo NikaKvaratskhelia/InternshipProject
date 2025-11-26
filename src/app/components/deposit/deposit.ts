@@ -40,11 +40,17 @@ export class Deposit {
       return;
     }
 
+    if (!this.paymentInfo.valid) {
+      this.showPopup = true;
+      this.errorMessage = 'Incorrect form';
+      return;
+    }
+
     const newBalance = this.prevBalance + Number(this.paymentInfo.value.depo);
     this.balanceService.setBalance(newBalance);
 
     this.showPopup = true;
-    this.errorMessage = $localize`Deposit successful!`
+    this.errorMessage = $localize`Deposit successful!`;
     setTimeout(() => {
       this.showPopup = false;
       this.router.navigate(['/']);

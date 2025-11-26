@@ -30,9 +30,6 @@
         <label for="depo" i18n>Deposit*</label>
         <input id="depo" type="number" min="0" max="9999" formControlName="depo" (input)="digitsOnly($event)"
             placeholder="Deposit Amount" required />
-        @if(errorMessage.length > 0){
-        {{errorMessage}}
-        }
     </div>
 
     <button type=" submit" i18n>Pay</button>

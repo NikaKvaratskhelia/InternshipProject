@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en-us" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="1806996447487025167" datatype="html">
         <source>Your Cart</source>
@@ -44,8 +44,8 @@
           <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8747838992853585418" datatype="html">
-        <source>Checkour Successful!</source>
+      <trans-unit id="3925590049227299889" datatype="html">
+        <source>Checkout Successful!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cart/cart.ts</context>
           <context context-type="linenumber">90</context>
@@ -58,8 +58,8 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2952895892013851979" datatype="html">
-        <source>Valid until**</source>
+      <trans-unit id="8701420331022024982" datatype="html">
+        <source>Valid until*</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/deposit/deposit.html</context>
           <context context-type="linenumber">12</context>
@@ -97,7 +97,7 @@
         <source>Deposit successful!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/deposit/deposit.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2181154762165715522" datatype="html">
@@ -188,6 +188,27 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.html</context>
           <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8788125049405332197" datatype="html">
+        <source>Choose Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5866254605255506989" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8101351979607717109" datatype="html">
+        <source>Georgian</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">9,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">

@@ -87,7 +87,7 @@ export class Cart {
     if (!this.balanceService.checkout(this.total)) {
       this.errorMessage = $localize`Insufficient balance!`;
     } else {
-      this.errorMessage = $localize`Checkour Successful!`;
+      this.errorMessage = $localize`Checkout Successful!`;
     }
 
     setTimeout(() => {
